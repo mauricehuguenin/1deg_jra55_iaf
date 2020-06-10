@@ -4,7 +4,12 @@ version: 1.0
 work/accessom2_restart.nml:
   fullpath: /scratch/e14/mv7494/access-om2/archive/1deg_jra55_iaf/restart200/accessom2_restart.nml
   hashes:
-    binhash: d812c411b5dceb88eb9c18da3f99229d
+    binhash: 088bc42df4dc32bfcdd006dce89133cd
+    md5: d4711fbd7fe246f9d52193ad235c2b6c
+work/accessom2_restart.nml~:
+  fullpath: /scratch/e14/mv7494/access-om2/archive/1deg_jra55_iaf/restart200/accessom2_restart.nml~
+  hashes:
+    binhash: aa8b17850f9a501fd5ef7a1af59c7c89
     md5: 20168ae427d0656f1c9227b3133d2e51
 work/ice/RESTART/grid.nc:
   copy: true
