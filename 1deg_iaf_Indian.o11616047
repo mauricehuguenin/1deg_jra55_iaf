@@ -1,0 +1,60 @@
+laboratory path:  /scratch/e14/mv7494/access-om2
+binary path:  /scratch/e14/mv7494/access-om2/bin
+input path:  /scratch/e14/mv7494/access-om2/input
+work path:  /scratch/e14/mv7494/access-om2/work
+archive path:  /scratch/e14/mv7494/access-om2/archive
+nruns: 1 nruns_per_submit: 1 subrun: 1
+Loading input manifest: manifests/input.yaml
+Loading restart manifest: manifests/restart.yaml
+Loading exe manifest: manifests/exe.yaml
+Setting up atmosphere
+Setting up ocean
+Setting up ice
+Setting up access-om2
+Checking exe and input manifests
+Updating full hashes for 3 files in manifests/exe.yaml
+Updating full hashes for 8 files in manifests/input.yaml
+Creating restart manifest
+Updating full hashes for 191 files in manifests/restart.yaml
+11621181.gadi-pbs
+Loading input manifest: manifests/input.yaml
+Loading restart manifest: manifests/restart.yaml
+Loading exe manifest: manifests/exe.yaml
+payu: Found modules in /opt/Modules/v4.3.0
+qsub -q express -P e14 -l walltime=10800 -l ncpus=4 -l mem=30GB -N 1deg_iaf_Indi_c -l wd -j n -v PAYU_PATH=/g/data3/hh5/public/apps/miniconda3/envs/analysis3-20.07/bin,PAYU_CURRENT_RUN=201,MODULESHOME=/opt/Modules/v4.3.0,MODULES_CMD=/opt/Modules/v4.3.0/libexec/modulecmd.tcl,MODULEPATH=/g/data/hh5/public/modules:/apps/Modules/restricted-modulefiles/matlab_unsw:/opt/Modules/modulefiles:/opt/Modules/v4.3.0/modulefiles:/apps/Modules/modulefiles -W umask=027 -l storage=gdata/hh5+gdata/ik11+scratch/e14+gdata/ua8+gdata/e14 -l storage=gdata/e14+gdata/hh5+gdata/ik11+gdata/qv56+scratch/e14 -- /g/data3/hh5/public/apps/miniconda3/envs/analysis3-20.07/bin/python3.7 /g/data3/hh5/public/apps/miniconda3/envs/analysis3-20.07/bin/payu-collate
+Writing manifests/input.yaml
+Writing manifests/restart.yaml
+Writing manifests/exe.yaml
+payu: Found modules in /opt/Modules/v4.3.0
+git add /home/561/mv7494/access-om2/1deg_jra55_iaf_Indian/config.yaml
+git add /home/561/mv7494/access-om2/1deg_jra55_iaf_Indian/atmosphere/atm.nml
+git add /home/561/mv7494/access-om2/1deg_jra55_iaf_Indian/atmosphere/forcing.json
+git add /home/561/mv7494/access-om2/1deg_jra55_iaf_Indian/ocean/data_table
+git add /home/561/mv7494/access-om2/1deg_jra55_iaf_Indian/ocean/diag_table
+git add /home/561/mv7494/access-om2/1deg_jra55_iaf_Indian/ocean/field_table
+git add /home/561/mv7494/access-om2/1deg_jra55_iaf_Indian/ocean/input.nml
+git add /home/561/mv7494/access-om2/1deg_jra55_iaf_Indian/ice/cice_in.nml
+git add /home/561/mv7494/access-om2/1deg_jra55_iaf_Indian/ice/input_ice.nml
+git add /home/561/mv7494/access-om2/1deg_jra55_iaf_Indian/ice/input_ice_gfdl.nml
+git add /home/561/mv7494/access-om2/1deg_jra55_iaf_Indian/ice/input_ice_monin.nml
+git add /home/561/mv7494/access-om2/1deg_jra55_iaf_Indian/ice/input_ice.nml
+git add /home/561/mv7494/access-om2/1deg_jra55_iaf_Indian/accessom2.nml
+git add /home/561/mv7494/access-om2/1deg_jra55_iaf_Indian/namcouple
+git add manifests/input.yaml
+git add manifests/restart.yaml
+git add manifests/exe.yaml
+git commit -am "2020-09-23 18:12:07: Run 201"
+mpirun  -wdir /scratch/e14/mv7494/access-om2/work/1deg_jra55_iaf_Indian/atmosphere -np 1  /scratch/e14/mv7494/access-om2/work/1deg_jra55_iaf_Indian/atmosphere/yatm_4198e150.exe : -wdir /scratch/e14/mv7494/access-om2/work/1deg_jra55_iaf_Indian/ocean -np 216  /scratch/e14/mv7494/access-om2/work/1deg_jra55_iaf_Indian/ocean/fms_ACCESS-OM_fd3e1a3_libaccessom2_a9d4b67.x : -wdir /scratch/e14/mv7494/access-om2/work/1deg_jra55_iaf_Indian/ice -np 24  /scratch/e14/mv7494/access-om2/work/1deg_jra55_iaf_Indian/ice/cice_auscom_360x300_24p_597e4561_libaccessom2_4198e150.exe
+
+======================================================================================
+                  Resource Usage on 2020-09-23 21:22:41:
+   Job Id:             11616047.gadi-pbs
+   Project:            e14
+   Exit Status:        0
+   Service Units:      1833.44
+   NCPUs Requested:    288                    NCPUs Used: 288             
+                                           CPU Time Used: 765:03:34                                  
+   Memory Requested:   500.0GB               Memory Used: 196.98GB        
+   Walltime requested: 05:00:00            Walltime Used: 03:10:59        
+   JobFS requested:    600.0MB                JobFS used: 8.2MB           
+======================================================================================
